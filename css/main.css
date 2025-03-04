@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=JetBrains+Mono&family=Koulen&display=swap");
+
+body,
+h3 {
+  font-family: "Khula", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  font-size: 10rem;
+  max-width: 100%;
+ /* Prevents overflow */
+}
+.sub-title {
+  margin: 0;
+  font-size: 2.25rem;
+}
+h2 {
+  font-family: "Koulen";
+}
+.nav {
+  display: flex;
+  justify-content: end;
+}
+.nav li {
+  list-style: none;
+  display: inline;
+  text-decoration: none;
+}
+.container {
+  max-width: 1032px;
+  margin: 0 auto;
+}
+#home {
+  background: url("/src/Anastasiabg2.png") no-repeat;
+  height: 100vh;
+  background-position: right;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: contain;
+}
+#home img {
+  position: absolute;
+  bottom: 0;
+  z-index: -99;
+  right: 0;
+}
+
+
+#my-work {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0px;
+  width: 100%;
+}
+#my-work > div {
+  border: 1px solid green;
+  width: 100%;
+}
+.ryzn,
+.ipr,
+.rehab-center {
+  position: relative;
+  width: fit-content; /* Adjust based on your layout */
+}
+
+.grid-img {
+  position: relative;
+  cursor: pointer;
+  padding: 96px 0px 96px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* When hovering over .ryzn or .ipr, show the hidden text */
+.ryzn:hover .hidden-container,
+.ipr:hover .hidden-container,
+.rehab-center:hover .hidden-container {
+  opacity: 1;
+}
+.hidden-text {
+  padding: 60px;
+  text-align: center;
+}
+
+/* ------------------media query -------------- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    background: red; /* Red for small devices */
+    margin: 0 auto;
+  }
+}
+
+/* Small devices to Medium devices (tablets, 600px to 992px) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 1032px;
+    margin: 0 auto;
+  }
+}
