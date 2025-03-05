@@ -189,6 +189,12 @@ div.ipr {
     max-width: 860px;
     margin: 0 auto;
   }
+  #home{
+    height: 80vh;
+  }
+  h1{
+    font-size: 8vw;
+  }
   .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
