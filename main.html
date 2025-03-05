@@ -1,109 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css" />
 
-    <title>Anastasia Kim</title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <nav class="nav">
-          <ul>
-            <li> <a href="#home">home</a></li>
-            <li><a href="#my-work">my work</a></li>
-            <li><a href="#about">about</a> </li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-        </nav>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css" />
 
-      <section id="home">
-        <div>
+  <title>Anastasia Kim</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".ryzn, .ipr, .rehab-center").forEach((item) => {
+        item.addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</head>
+
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <ul>
+          <li> <a href="#home">home</a></li>
+          <li><a href="#my-work">my work</a></li>
+          <li><a href="#about">about</a> </li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <div>
         <h1>Hi.I'm <br> Anastasia</h1>
         <h3 class="sub-title">Front end Developer</h3>
         <!-- <img src="/src/Anastasiabg.png" alt="" /> -->
+      </div>
+    </section>
+
+  </div>
+
+  <section id="my-work">
+    <div class="container">
+      <h2 class="my-work-title">my work</h2>
     </div>
-      </section>
-    </div>
-    <h3>my work</h3>
-    <section id="my-work">
+    <div class="grid">
+
       <div class="ryzn">
         <div class="grid-img">
           <img src="/src/ryzn.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
-        <div class="hidden-text">
-          <h4>Ryzn Square</h4>
-          <p>
-            Offering digital services as web development, cloud solutions,
-            design and marketing.
-          </p>
-          <a
-            href="https://ryznsquare.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            visit <img src="/src/icons/share-icon.svg" alt="" />
-          </a>
+          <div class="hidden-text">
+            <h4>Ryzn Square</h4>
+            <div>
+              <p>
+                Offering digital services as web development, cloud solutions,
+                design and marketing.
+              </p>
+              <div class="visit">
+                <a href="https://ryznsquare.com/" target="_blank" rel="noopener noreferrer">
+                  visit
+                </a>
+                <img src="/src/icons/share-icon.svg" alt="" />
+              </div>
+
+            </div>
           </div>
         </div>
-        </div>
+
       </div>
       <div class="ipr">
         <div class="grid-img">
-          <img src="/src/Anastasiabg.png" alt="" height="200px" />
+          <img src="/src/ipr.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
-        <div class="hidden-text">
-          <h4>Ideas para Regalos</h4>
-          <p>
-            Cross platform gift giving app developed with JavaScript, React, and
-            Go. <br />
-            MVC pattern for user interactions and data flow. <br />
-            Auth0 for secure authentication. <br />
-            Managed data using DTOs and Gin Gonic for backend services and APIs.
-            <br />
-            Entity CRUD operations and SQL database for data storage. <br />
-          </p>
-          <a
-            href="https://ideaspararegalos.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            visit <img src="/src/icons/share-icon.svg" alt="" />
-          </a>
+          <div class="hidden-text">
+            <h4>Ideas para Regalos</h4>
+
+            <p>
+              Cross platform gift giving app developed with JavaScript, React, and
+              Go. <br />
+              MVC pattern for user interactions and data flow. <br />
+              Auth0 for secure authentication. <br />
+              Managed data using DTOs and Gin Gonic for backend services and APIs.
+              <br />
+              Entity CRUD operations and SQL database for data storage. <br />
+            </p>
+            <div class="visit"><a href="https://ideaspararegalos.vercel.app/" target="_blank" rel="noopener noreferrer">
+                visit
+              </a><img src="/src/icons/share-icon.svg" alt="" /></div>
+
+          </div>
         </div>
-    </div>
       </div>
       <div class="rehab-center">
         <div class="grid-img">
-          <img src="/src/Anastasiabg.png" alt="" height="200px" />
+          <img src="/src/rehabcenter.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
-        <div class="hidden-text">
-          <h4>Rehabilitation Center</h4>
-          <p>
-            Cross platform gift giving app developed with JavaScript, React, and
-            Go. <br />
-            MVC pattern for user interactions and data flow. <br />
-            Auth0 for secure authentication. <br />
-            Managed data using DTOs and Gin Gonic for backend services and APIs.
-            <br />
-            Entity CRUD operations and SQL database for data storage. <br />
-          </p>
-          <a
-            href="https://ideaspararegalos.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            visit <img src="/src/icons/share-icon.svg" alt="" />
-          </a>
+          <div class="hidden-text">
+            <h4>Rehabilitation Center</h4>
+            <div>
+              <p>
+                JSP for dynamic server-side content rendering. Interactive elements powered by JavaScript.
+              </p>
+              <div class="visit">
+                <a href="https://www.xn--zj4bt1j3yijlf.com/" target="_blank" rel="noopener noreferrer">
+                  visit
+                </a>
+                <img src="/src/icons/share-icon.svg" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+
+  </section>
+
+  <div class="container">
+    <section id="about">
+      <h2 class="about"> about </h2>
+      <h4>Design, Code, and Innovation: Front-end Developer based in Incheon, South Korea.</h4>
+      <p>I'm a frontend developer dedicated to crafting seamless, engaging, and visually compelling web experiences. My
+        focus is on building intuitive and user-friendly interfaces that not only enhance usability but also create
+        meaningful interactions. I believe that great design isn’t just about aesthetics—it’s about creating experiences
+        that feel natural, effortless, and enjoyable.
+        My background in fashion production has given me a unique perspective on design, precision, and project
+        coordination. Understanding how visual elements harmonize allows me to bring a refined aesthetic to front-end
+        development, ensuring interfaces are both functional and visually cohesive. Additionally, my experience working
+        across teams has strengthened my ability to collaborate effectively with designers, developers, and stakeholders
+        to bring ideas to life.
+        I am deeply committed to writing clean, efficient code and continuously improving my skill set. I enjoy staying
+        up to date with emerging technologies and best practices, always seeking innovative ways to enhance user
+        engagement. Whether it’s refining micro-interactions, optimizing performance, or ensuring accessibility, I
+        approach every project with creativity, attention to detail, and a problem-solving mindset.
+        For me, frontend development is more than just writing code—it’s about shaping experiences, bridging design and
+        technology, and bringing ideas to life in a way that truly connects with users.</p>
+
+
+      <h2> skills </h2>
+      <div class="skills">
+        <div>
+          <span>Programming Languages</span>
+          <p>JavaScript (ES2015+), TypeScript, HTML, CSS, PHP, Java</p>
+        </div>
+        <div>
+          <span>Libraries & Frameworks</span>
+          <p>React, React Native, Tailwind CSS, Next.js </p>
+        </div>
+        <div>
+          <span>Tools & Platforms</span>
+          <p>Git, GitHub, Figma, Photoshop, Illustrator, Vercel, Docker, Postman </p>
+        </div>
       </div>
     </section>
-  </body>
+
+
+    <h2>contact me</h2>
+    <section id="contact">
+      <div>
+        <p>Do you need help building you project?</p>
+        <a
+          href="mailto:bkim.anastasia@gmail.com?subject=Project%20Inquiry&body=Hello%20Anastasia,%0D%0A%0D%0A%5BPlease%20provide%20details%20about%20your%20project%20or%20inquiry%20here.%5D%0D%0A%0D%0AThank%20you%20for%20your%20time.%20Looking%20forward%20to%20hearing%20from%20you!">
+          bkim.anastasia@gmail.com
+        </a>
+      </div>
+      <div class="socials">
+        <p>Find me on</p>
+        <div>
+          <a href="https://www.linkedin.com/in/anastasia-kim-312965181/" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+          <a href="http://github.com/aniibk" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="footer">
+      © 2025 Anastasia Kim
+    </section>
+  </div>
+</body>
+
 </html>

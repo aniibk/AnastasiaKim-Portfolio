@@ -1,69 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=JetBrains+Mono&family=Koulen&display=swap");
-
-body,
-h3 {
+:root {
+  --black: #212427;
+}
+body {
   font-family: "Khula", sans-serif;
   font-weight: 400;
+  color: var(--black);
 }
 h1 {
   font-family: "JetBrains Mono", monospace;
   margin: 0;
-  font-size: 10rem;
   max-width: 100%;
- /* Prevents overflow */
-}
-.sub-title {
-  margin: 0;
-  font-size: 2.25rem;
+  font-size: 3.4rem;
 }
 h2 {
   font-family: "Koulen";
+  font-size: 28px;
+  margin-bottom: 0;
 }
-.nav {
+
+.nav ul {
   display: flex;
   justify-content: end;
+  gap: 20px;
 }
 .nav li {
   list-style: none;
-  display: inline;
+}
+.nav li > a {
   text-decoration: none;
 }
+.nav li a:hover {
+  font-weight: bold;
+  color: #ef93b7;
+}
 .container {
-  max-width: 1032px;
   margin: 0 auto;
+  position: relative;
+}
+a {
+  color: var(--black);
 }
 #home {
   background: url("/src/Anastasiabg2.png") no-repeat;
-  height: 100vh;
   background-position: right;
-  position: relative;
   display: flex;
   align-items: center;
   background-size: contain;
 }
-#home img {
-  position: absolute;
-  bottom: 0;
-  z-index: -99;
-  right: 0;
-}
-
-
 #my-work {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0px;
+  margin: 16px;
+}
+
+.my-work-title {
+  font-family: "Khula", sans-serif;
+  font-weight: bold;
+  line-height: 0;
+  margin-bottom: 11px;
+  font-size: 60px;
+  margin-left: 0;
+}
+div.ryzn,
+div.ipr,
+div.rehab-center {
+  border: 1px solid black;
   width: 100%;
 }
-#my-work > div {
-  border: 1px solid green;
-  width: 100%;
+div.ipr {
+  border-top: none;
+  border-bottom: none;
 }
 .ryzn,
 .ipr,
 .rehab-center {
   position: relative;
-  width: fit-content; /* Adjust based on your layout */
+  width: fit-content;
 }
 
 .grid-img {
@@ -73,13 +84,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .hidden-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: pink;
   position: absolute;
   top: 0;
   left: 0;
@@ -95,17 +105,81 @@ h2 {
 .rehab-center:hover .hidden-container {
   opacity: 1;
 }
+.ryzn:hover .grid-img {
+  opacity: 0;
+}
 .hidden-text {
-  padding: 60px;
+  padding: 30px;
   text-align: center;
 }
+.hidden-container p {
+  font-size: 14px;
+}
+.hidden-container h4 {
+  font-size: 24px;
+}
+.ryzn .hidden-container {
+  background-color: #0e33ed;
+  z-index: -99;
+}
+.ipr .hidden-container {
+  background-color: #ffe68f;
+}
+.rehab-center .hidden-container {
+  background-color: #00791e;
+}
+.hidden-container a {
+  font-weight: bold;
+  color: var(--black);
+}
+.hidden-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.ipr .hidden-text {
+  align-content: center !important;
+}
+.visit {
+  display: flex;
+  justify-content: center;
+}
+.visit:hover {
+  cursor: pointer;
+}
+.skills,
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.skills p {
+  margin-top: 5px;
+}
+.socials > div {
+  display: flex;
+  gap: 20px;
+}
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  margin-top: 8rem;
+  opacity: 50%;
+}
 
-/* ------------------media query -------------- */
+/* ------------------------media query ----------------------- */
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .container {
-    background: red; /* Red for small devices */
-    margin: 0 auto;
+    margin: 0 16px 0px 16px;
+  }
+  #my-work > .container{
+    margin: 0;
+  }
+  #home{
+    height: 75vh;
   }
 }
 
@@ -123,4 +197,46 @@ h2 {
     max-width: 1032px;
     margin: 0 auto;
   }
+  #home {
+    height: 100vh;
+  }
+  .sub-title {
+    margin: 0;
+    font-size: 2.25rem;
+  }
+  h1{
+    font-size: 10vw;
+  }
+  h2 {
+    font-size: 68px;
+  }
+  h4,
+  p {
+    font-size: 18px;
+  }
+  #my-work {
+    margin: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0px;
+    width: 100%;
+    position: relative;
+  }
+  .my-work-title {
+    font-size: 128px;
+    margin-bottom: 25px;
+  }
+  div.ipr {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .ipr .hidden-container {
+    background-color: #ffe68f;
+    border-left: 1px solid black;
+  }
+ 
 }
