@@ -189,6 +189,23 @@ div.ipr {
     max-width: 860px;
     margin: 0 auto;
   }
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  div.ipr {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .ipr .hidden-container {
+    background-color: #ffe68f;
+    border-left: 1px solid black;
+  }
+  .hidden-text{
+    padding: 20px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
