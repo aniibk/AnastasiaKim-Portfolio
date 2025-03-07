@@ -42,7 +42,7 @@ a {
   color: var(--black);
 }
 #home {
-  background: url("/src/Anastasiabg2.png") no-repeat;
+  background: url("./src/Anastasiabg2.png") no-repeat;
   background-position: right;
   display: flex;
   align-items: center;
