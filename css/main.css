@@ -193,7 +193,7 @@ div.ipr {
     height: 80vh;
   }
   h1{
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .grid{
     display: grid;
@@ -272,4 +272,10 @@ div.ipr {
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+@media only screen and (min-width: 1500px) {
+  h1{
+    font-size: 8vw;
+  }
+
 }
