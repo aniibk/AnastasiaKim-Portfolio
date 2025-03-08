@@ -59,6 +59,8 @@ a {
   margin-bottom: 11px;
   font-size: 60px;
   margin-left: 0;
+  position: relative;
+  z-index: 10;
 }
 div.ryzn,
 div.ipr,
@@ -120,7 +122,6 @@ div.ipr {
 }
 .ryzn .hidden-container {
   background-color: #0e33ed;
-  z-index: -99;
 }
 .ipr .hidden-container {
   background-color: #ffe68f;
@@ -175,14 +176,14 @@ div.ipr {
   .container {
     margin: 0 16px 0px 16px;
   }
-  #my-work > .container{
+  #my-work > .container {
     margin: 0;
   }
-  #home{
+  #home {
     height: 75vh;
   }
-  .ipr .hidden-text>p{
-   margin: 0;
+  .ipr .hidden-text > p {
+    margin: 0;
   }
 }
 
@@ -192,13 +193,13 @@ div.ipr {
     max-width: 860px;
     margin: 0 auto;
   }
-  #home{
+  #home {
     height: 80vh;
   }
-  h1{
+  h1 {
     font-size: 10vw;
   }
-  .grid{
+  .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -212,7 +213,7 @@ div.ipr {
     background-color: #ffe68f;
     border-left: 1px solid black;
   }
-  .hidden-text{
+  .hidden-text {
     padding: 20px;
   }
 }
@@ -230,7 +231,7 @@ div.ipr {
     margin: 0;
     font-size: 2.25rem;
   }
-  h1{
+  h1 {
     font-size: 10vw;
   }
   h2 {
@@ -264,7 +265,6 @@ div.ipr {
     background-color: #ffe68f;
     border-left: 1px solid black;
   }
- 
 }
 
 #typewriter::after {
@@ -274,11 +274,12 @@ div.ipr {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 @media only screen and (min-width: 1500px) {
-  h1{
+  h1 {
     font-size: 8vw;
   }
-
 }
