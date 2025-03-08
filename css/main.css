@@ -181,6 +181,9 @@ div.ipr {
   #home{
     height: 75vh;
   }
+  .ipr .hidden-text>p{
+   margin: 0;
+  }
 }
 
 /* Small devices to Medium devices (tablets, 600px to 992px) */
