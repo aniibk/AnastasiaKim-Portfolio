@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Khula:wght@400;700&family=JetBrains+Mono&family=Koulen&display=swap");
 :root {
   --black: #212427;
+  --pink: #ef93b7;
 }
 body {
   font-family: "Khula", sans-serif;
@@ -21,7 +22,16 @@ h2 {
 
 .nav ul {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.nav ul{
+  display: flex;
   gap: 20px;
 }
 .nav li {
@@ -30,9 +40,11 @@ h2 {
 .nav li > a {
   text-decoration: none;
 }
-.nav li a:hover {
+.nav li a:hover,
+.nav li:hover, .language-menu li.active {
   font-weight: bold;
-  color: #ef93b7;
+  color: var(--pink);
+  cursor: pointer;
 }
 .container {
   margin: 0 auto;
@@ -42,7 +54,7 @@ a {
   color: var(--black);
 }
 #home {
-  background: url("../src/Anastasiabg2.png") no-repeat;
+  background: url("../images/Anastasiabg2.png") no-repeat;
   background-position: right;
   display: flex;
   align-items: center;
@@ -145,8 +157,13 @@ div.ipr {
   display: flex;
   justify-content: center;
 }
-.visit:hover {
-  cursor: pointer;
+
+.visit {
+  pointer-events: auto;
+}
+
+.visit > a:hover {
+  cursor: pointer !important;
 }
 .skills,
 #contact {

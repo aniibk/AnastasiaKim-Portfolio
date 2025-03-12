@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./src/css/main.css" />
   <link rel="icon" href="./src/icons/icon.png" type="image/x-icon">
 
-  <meta property="og:image" content="https://raw.githubusercontent.com/aniibk/AnastasiaKim-Portfolio/main/src/Anastasiabg2.png" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/aniibk/AnastasiaKim-Portfolio/main/src/preview.png" />
   <meta property="og:title" content="Anastasia Kim" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Welcome to my portfolio!" />
@@ -15,32 +16,10 @@
 
   <title>Anastasia Kim</title>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const text = "Hi. I'm Anastasia";
-      const speed = 150;
-      let i = 0;
-
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("typewriter").textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
-        }
-      }
-
-      setTimeout(typeWriter, 500);
-    });
+  <script src="./src/assets/translations/translations.json"></script>
+  <script src="./src/js/main.js"></script>
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll(".ryzn, .ipr, .rehab-center").forEach((item) => {
-        item.addEventListener("click", function () {
-          this.classList.toggle("active");
-        });
-      });
-    });
-  </script>
 </head>
 
 
@@ -48,19 +27,26 @@
   <div class="container">
     <header>
       <nav class="nav">
+
+        <ul class="language-menu">
+          <li onclick="changeLanguage('en')" data-lang="en">en</li>
+          <li onclick="changeLanguage('es')" data-lang="es">es</li>
+          <li onclick="changeLanguage('ko')" data-lang="ko">ko</li>
+        </ul>
         <ul>
-          <li> <a href="#home">home</a></li>
-          <li><a href="#my-work">my work</a></li>
-          <li><a href="#about">about</a> </li>
-          <li><a href="#contact">contact</a></li>
+          <li> <a href="#home" data-lang-key="home">home</a></li>
+          <li><a href="#my-work" data-lang-key="my_work">my work</a></li>
+          <li><a href="#about" data-lang-key="about">about</a> </li>
+          <li><a href="#contact" data-lang-key="contact">contact</a></li>
+
         </ul>
       </nav>
     </header>
 
     <section id="home">
       <div>
-        <h1><span id="typewriter"></h1>
-        <h3 class="sub-title">Front end Developer</h3>
+        <h1><span id="typewriter" data-lang-key="greeting">Hi. I'm Anastasia</span></h1>
+        <h3 class="sub-title" data-lang-key="subtitle">Front-end Developer</h3>
         <!-- <img src="/src/Anastasiabg.png" alt="" /> -->
       </div>
     </section>
@@ -69,24 +55,24 @@
 
   <section id="my-work">
     <div class="container">
-      <h2 class="my-work-title">my work</h2>
+      <h2 class="my-work-title" data-lang-key="my_work">my work</h2>
     </div>
     <div class="grid">
 
       <div class="ryzn">
         <div class="grid-img">
-          <img src="./src/ryzn.png" alt="" height="200px" />
+          <img src="./src/images/ryzn.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
           <div class="hidden-text">
             <h4>Ryzn Square</h4>
             <div>
-              <p>
-                Offering digital services as web development, cloud solutions,
-                design and marketing.
+              <p data-lang-key="ryzn_desc">
+                Offering digital services such as web development, cloud solutions, design, and marketing.
               </p>
               <div class="visit">
-                <a href="https://ryznsquare.com/" target="_blank" rel="noopener noreferrer">visit</a>
+                <a href="https://ryznsquare.com/" target="_blank" rel="noopener noreferrer"
+                  data-lang-key="visit_link">visit</a>
                 <img src="./src/icons/share-icon.svg" alt="" />
               </div>
 
@@ -97,22 +83,22 @@
       </div>
       <div class="ipr">
         <div class="grid-img">
-          <img src="./src/ipr.png" alt="" height="200px" />
+          <img src="./src/images/ipr.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
           <div class="hidden-text">
             <h4>Ideas para Regalos</h4>
 
-            <p>
+            <p data-lang-key="ipr_desc">
               Cross platform gift giving app developed with JavaScript, React, and
-              Go. <br />
-              MVC pattern for user interactions and data flow. <br />
-              Auth0 for secure authentication. <br />
+              Go.
+              MVC pattern for user interactions and data flow.
+              Auth0 for secure authentication.
               Managed data using DTOs and Gin Gonic for backend services and APIs.
-              <br />
-              Entity CRUD operations and SQL database for data storage. <br />
+              Entity CRUD operations and SQL database for data storage.
             </p>
-            <div class="visit"><a href="https://ideaspararegalos.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <div class="visit"><a href="https://ideaspararegalos.vercel.app/" target="_blank" rel="noopener noreferrer"
+                data-lang-key="visit_link">
                 visit
               </a><img src="./src/icons/share-icon.svg" alt="" /></div>
 
@@ -121,17 +107,18 @@
       </div>
       <div class="rehab-center">
         <div class="grid-img">
-          <img src="./src/rehabcenter.png" alt="" height="200px" />
+          <img src="./src/images/rehabcenter.png" alt="" height="200px" />
         </div>
         <div class="hidden-container">
           <div class="hidden-text">
             <h4>Rehabilitation Center</h4>
             <div>
-              <p>
+              <p data-lang-key="rehab_desc">
                 JSP for dynamic server-side content rendering. Interactive elements powered by JavaScript.
               </p>
               <div class="visit">
-                <a href="https://www.xn--zj4bt1j3yijlf.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.xn--zj4bt1j3yijlf.com/" target="_blank" rel="noopener noreferrer"
+                  data-lang-key="visit_link">
                   visit
                 </a>
                 <img src="./src/icons/share-icon.svg" alt="" />
@@ -145,9 +132,10 @@
 
   <div class="container">
     <section id="about">
-      <h2 class="about"> about </h2>
-      <h4>Design, Code, and Innovation: Front-end Developer based in Incheon, South Korea.</h4>
-      <p>I'm a frontend developer dedicated to crafting seamless, engaging, and visually compelling web experiences. My
+      <h2 class="about" data-lang-key="about"> about </h2>
+      <h4 data-lang-key="about_subtitle">Design, Code, and Innovation: Front-end Developer based in Incheon, South
+        Korea.</h4>
+      <p data-lang-key="about_text">I'm a frontend developer dedicated to crafting seamless, engaging, and visually compelling web experiences. My
         focus is on building intuitive and user-friendly interfaces that not only enhance usability but also create
         meaningful interactions. I believe that great design isn’t just about aesthetics—it’s about creating experiences
         that feel natural, effortless, and enjoyable.
@@ -164,35 +152,35 @@
         technology, and bringing ideas to life in a way that truly connects with users.</p>
 
 
-      <h2> skills </h2>
+      <h2 data-lang-key="skills"> skills </h2>
       <div class="skills">
         <div>
-          <span>Programming Languages</span>
-          <p>JavaScript (ES2015+), TypeScript, HTML, CSS, PHP, Java</p>
+          <span data-lang-key="prog_lang">Programming Languages</span>
+          <p>JavaScript, TypeScript, HTML, CSS, PHP, Java</p>
         </div>
         <div>
-          <span>Libraries & Frameworks</span>
+          <span data-lang-key="libraries">Libraries & Frameworks</span>
           <p>React, React Native, Tailwind CSS, Next.js </p>
         </div>
         <div>
-          <span>Tools & Platforms</span>
+          <span data-lang-key="tools_platforms">Tools & Platforms</span>
           <p>Git, GitHub, Figma, Photoshop, Illustrator, Vercel, Docker, Postman </p>
         </div>
       </div>
     </section>
 
 
-    <h2>contact me</h2>
+    <h2 data-lang-key="contact">contact me</h2>
     <section id="contact">
       <div>
-        <p>Do you need help building you project?</p>
+        <p data-lang-key="contact_question">Do you need help building you project?</p>
         <a
           href="mailto:bkim.anastasia@gmail.com?subject=Project%20Inquiry&body=Hello%20Anastasia,%0D%0A%0D%0A%5BPlease%20provide%20details%20about%20your%20project%20or%20inquiry%20here.%5D%0D%0A%0D%0AThank%20you%20for%20your%20time.%20Looking%20forward%20to%20hearing%20from%20you!">
           bkim.anastasia@gmail.com
         </a>
       </div>
       <div class="socials">
-        <p>Find me on</p>
+        <p data-lang-key="find_me">Find me on</p>
         <div>
           <a href="https://www.linkedin.com/in/anastasia-kim-312965181/" target="_blank"
             rel="noopener noreferrer">LinkedIn</a>
