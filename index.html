@@ -24,10 +24,30 @@
 
 
 <body>
-  <div class="container">
-    <header>
-      <nav class="nav">
+  <header>
+    <div class="container">
+      <div class="nav-mobile">
+        <button class="menu-button open" onclick="openNav()">☰</button>
+        <nav>
+          <ul class="language-menu">
+            <li onclick="changeLanguage('en')" data-lang="en">en</li>
+            <li onclick="changeLanguage('es')" data-lang="es">es</li>
+            <li onclick="changeLanguage('ko')" data-lang="ko">ko</li>
+          </ul>
+        </nav>
+      </div>
 
+      <nav id="side-nav">
+        <button class="menu-button close" onclick="closeNav()">☰</button>
+        <ul>
+          <li> <a href="#home" data-lang-key="home" onclick="closeNav()">home</a></li>
+          <li><a href="#my-work" data-lang-key="my_work" onclick="closeNav()">my work</a></li>
+          <li><a href="#about" data-lang-key="about" onclick="closeNav()">about</a> </li>
+          <li><a href="#contact" data-lang-key="contact" onclick="closeNav()">contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="nav">
         <ul class="language-menu">
           <li onclick="changeLanguage('en')" data-lang="en">en</li>
           <li onclick="changeLanguage('es')" data-lang="es">es</li>
@@ -41,17 +61,21 @@
 
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section id="home">
+
+  <section id="home">
+    <div class="container">
       <div>
         <h1><span id="typewriter" data-lang-key="greeting">Hi. I'm Anastasia</span></h1>
         <h3 class="sub-title" data-lang-key="subtitle">Front-end Developer</h3>
         <!-- <img src="/src/Anastasiabg.png" alt="" /> -->
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+
 
   <section id="my-work">
     <div class="container">
@@ -135,7 +159,8 @@
       <h2 class="about" data-lang-key="about"> about </h2>
       <h4 data-lang-key="about_subtitle">Design, Code, and Innovation: Front-end Developer based in Incheon, South
         Korea.</h4>
-      <p data-lang-key="about_text">I'm a frontend developer dedicated to crafting seamless, engaging, and visually compelling web experiences. My
+      <p data-lang-key="about_text">I'm a frontend developer dedicated to crafting seamless, engaging, and visually
+        compelling web experiences. My
         focus is on building intuitive and user-friendly interfaces that not only enhance usability but also create
         meaningful interactions. I believe that great design isn’t just about aesthetics—it’s about creating experiences
         that feel natural, effortless, and enjoyable.

@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Load language and update UI
 function loadLanguage(lang) {
   fetch("../src/assets/translations/translations.json")
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       const translations = data[lang] || {}; // Use an empty object if translations don't exist
 
-      document.querySelectorAll("[data-lang-key]").forEach(element => {
+      document.querySelectorAll("[data-lang-key]").forEach((element) => {
         const key = element.getAttribute("data-lang-key");
 
         // Store original text only once
@@ -44,18 +44,21 @@ function loadLanguage(lang) {
       });
 
       // Handle typewriter effect separately
-      const greetingElement = document.querySelector("[data-lang-key='greeting']");
+      const greetingElement = document.querySelector(
+        "[data-lang-key='greeting']"
+      );
       if (greetingElement) {
-        const greetingText = lang === "en" 
-          ? greetingElement.dataset.originalText 
-          : translations["greeting"];
+        const greetingText =
+          lang === "en"
+            ? greetingElement.dataset.originalText
+            : translations["greeting"];
         startTypewriterEffect(greetingText);
       }
 
       localStorage.setItem("language", lang);
       updateActiveLanguage(lang);
     })
-    .catch(error => console.error("Error loading translations:", error));
+    .catch((error) => console.error("Error loading translations:", error));
 }
 
 // Change language and update styles
@@ -69,12 +72,11 @@ function updateActiveLanguage(lang) {
     item.classList.remove("active");
   });
 
-  const selectedLang = document.querySelector(
-    `.language-menu li[data-lang="${lang}"]`
-  );
-  if (selectedLang) {
-    selectedLang.classList.add("active");
-  }
+  document
+    .querySelectorAll(`.language-menu li[data-lang="${lang}"]`)
+    .forEach((item) => {
+      item.classList.add("active");
+    });
 }
 
 // Typewriter Effect with Dynamic Text
@@ -103,8 +105,6 @@ function startTypewriterEffect(text) {
   typewriterTimeout = setTimeout(typeWriter, 500);
 }
 
-
-
 //
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".ryzn, .ipr, .rehab-center").forEach((item) => {
@@ -117,3 +117,43 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem("language") || "en";
   loadLanguage(savedLang);
 });
+
+//Side Menu
+document.addEventListener("DOMContentLoaded", function() {
+  const openButton = document.querySelector(".menu-button.open"); // Open button (☰)
+  const closeButton = document.querySelector(".menu-button.close"); // Close button (☰)
+
+  // Add event listener to the open button
+  openButton.addEventListener("click", function() {
+    // When open button is clicked, add the active class
+    openButton.classList.add("active"); // Open button turns red
+  });
+
+  // Add event listener to the close button
+  closeButton.addEventListener("click", function() {
+    // When close button is clicked, remove the active class from the open button
+    closeNav(); // Call the closeNav function which will reset the button color
+  });
+});
+
+function openNav() {
+  document.getElementById("side-nav").style.width = "70px";
+  const elements = document.getElementsByClassName("container");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.marginLeft = "70px";
+  }
+}
+
+function closeNav() {
+  // Close the side nav
+  document.getElementById("side-nav").style.width = "0";
+  const elements = document.getElementsByClassName("container");
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style.marginLeft = "16px";
+  }
+  
+  // Reset the open button color by removing the "active" class
+  const openButton = document.querySelector(".menu-button.open");
+  openButton.classList.remove("active"); // Return the button to its original color
+}
+
