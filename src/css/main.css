@@ -3,6 +3,9 @@
   --black: #212427;
   --pink: #ef93b7;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Khula", sans-serif;
   font-weight: 400;
