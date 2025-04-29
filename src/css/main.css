@@ -101,7 +101,7 @@ h2 {
   margin: 0;
   padding: 0;
 }
-.menu-button.active{
+.menu-button.active {
   color: transparent;
 }
 
@@ -111,7 +111,7 @@ h2 {
   align-items: center;
   background-color: white;
   position: fixed;
-  width: 92%;  
+  width: 92%;
   z-index: 10;
 }
 .nav-mobile .language-menu {
@@ -121,7 +121,6 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
 
 .container {
   margin: 0 auto;
@@ -242,8 +241,7 @@ div.ipr {
 .visit > a:hover {
   cursor: pointer !important;
 }
-.skills,
-#contact {
+.skills {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -251,6 +249,57 @@ div.ipr {
 .skills p {
   margin-top: 5px;
 }
+#contact{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form > div {
+  width: 100%;
+  display: flex;
+}
+.contact-form .personal-info {
+  width: 100%;
+  display: flex;
+ gap: 1rem;
+}
+.personal-info > div, .email > div, .message > div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+input {
+  height: 38px;
+  border: 0.5px solid var(--black);
+  width: 99%;
+  font-size: 18px;
+}
+
+label span {
+  color: red;
+}
+textarea {
+  border: 0.5px solid var(--black);
+  height: 100px;
+}
+.submit-btn {
+  background-color: var(--black);
+  color: var(--pink);
+  padding: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
 .socials > div {
   display: flex;
   gap: 20px;
@@ -263,6 +312,10 @@ div.ipr {
   opacity: 50%;
 }
 
+.thank-you-container{
+  display: grid;
+  text-align: center;
+}
 /* ------------------------media query ----------------------- */
 
 /* Extra small devices (phones, 600px and down) */
@@ -279,7 +332,7 @@ div.ipr {
   .ipr .hidden-text > p {
     margin: 0;
   }
-  .nav{
+  .nav {
     display: none;
   }
 }
@@ -313,7 +366,7 @@ div.ipr {
   .hidden-text {
     padding: 20px;
   }
-  .nav-mobile{
+  .nav-mobile {
     display: none;
   }
 }
@@ -365,7 +418,7 @@ div.ipr {
     background-color: #ffe68f;
     border-left: 1px solid black;
   }
-  .nav-mobile{
+  .nav-mobile {
     display: none;
   }
 }
@@ -386,4 +439,3 @@ div.ipr {
     font-size: 8vw;
   }
 }
-

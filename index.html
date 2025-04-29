@@ -195,13 +195,49 @@
 
     <h2 data-lang-key="contact">contact me</h2>
     <section id="contact">
-      <div>
+      <div class="form">
         <p data-lang-key="contact_question">Do you need help building you project?</p>
-        <a
-          href="mailto:bkim.anastasia@gmail.com?subject=Project%20Inquiry&body=Hello%20Anastasia,%0D%0A%0D%0A%5BPlease%20provide%20details%20about%20your%20project%20or%20inquiry%20here.%5D%0D%0A%0D%0AThank%20you%20for%20your%20time.%20Looking%20forward%20to%20hearing%20from%20you!">
-          bkim.anastasia@gmail.com
-        </a>
+
+        <form action="https://formspree.io/f/xldbggwq" method="POST" class="contact-form">
+          <input type="hidden" name="_next" value="https://anastasiabkim.com/thankyou.html">
+
+          <div class="personal-info">
+            <div>
+              <label for="name"> First name: <span class="required">*</span></label>
+              <input type="text" name="name" required>
+            </div>
+
+
+            <div>
+              <label for="last-name">Last name: <span class="required">*</span></label>
+              <input type="text" name="last name" required>
+            </div>
+          </div>
+
+          <div class="email">
+            <div>
+              <label>Email: <span class="required">*</span> </label>
+              <input type="email" name="email" required>
+            </div>
+
+          </div>
+          <div class="message">
+            <div>
+              <label>
+                Message: <span class="required">*</span> </label>
+              <textarea name="message"></textarea>
+            </div>
+
+          </div>
+
+
+
+
+
+          <button type="submit" class="submit-btn">SEND</button>
+        </form>
       </div>
+
       <div class="socials">
         <p data-lang-key="find_me">Find me on</p>
         <div>
