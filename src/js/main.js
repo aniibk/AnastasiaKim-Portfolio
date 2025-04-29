@@ -157,3 +157,31 @@ function closeNav() {
   openButton.classList.remove("active"); // Return the button to its original color
 }
 
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // ✅ Redirect to your custom thank you page
+        window.location.href = "/thankyou";  // or "/thankyou.html"
+      } else {
+        alert("There was a problem submitting the form. Please try again.");
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    }
+  });
+
