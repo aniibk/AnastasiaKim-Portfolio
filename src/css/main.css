@@ -291,6 +291,13 @@ textarea {
   border: 0.5px solid var(--black);
   height: 100px;
 }
+input,
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none; /* remove default iOS styles */
+  appearance: none;
+}
+
 .submit-btn {
   background-color: var(--black);
   color: var(--pink);
