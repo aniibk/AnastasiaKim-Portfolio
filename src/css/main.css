@@ -249,7 +249,7 @@ div.ipr {
 .skills p {
   margin-top: 5px;
 }
-#contact{
+#contact {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -266,16 +266,18 @@ div.ipr {
 .contact-form .personal-info {
   width: 100%;
   display: flex;
- gap: 1rem;
+  gap: 1rem;
 }
-.personal-info, .email{
+.personal-info,
+.email {
   width: 100%;
 }
-.personal-info > div, .email > div, .message > div{
+.personal-info > div,
+.email > div,
+.message > div {
   display: flex;
   flex-direction: column;
-  width: 100% !important;
-
+  width: 100%;
 }
 label {
   font-weight: bold;
@@ -284,7 +286,6 @@ label {
 input {
   height: 38px;
   border: 0.5px solid var(--black);
-  width: 99%;
   font-size: 18px;
 }
 
@@ -323,7 +324,7 @@ textarea {
   opacity: 50%;
 }
 
-.thank-you-container{
+.thank-you-container {
   display: grid;
   text-align: center;
 }
@@ -346,9 +347,14 @@ textarea {
   .nav {
     display: none;
   }
+
   label {
-  font-size: 16px;
-}
+    font-size: 16px;
+  }
+
+  .personal-info {
+    flex-direction: column;
+  }
 }
 
 /* Small devices to Medium devices (tablets, 600px to 992px) */
