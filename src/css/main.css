@@ -346,6 +346,9 @@ textarea {
   .nav {
     display: none;
   }
+  label {
+  font-size: 16px;
+}
 }
 
 /* Small devices to Medium devices (tablets, 600px to 992px) */
