@@ -268,10 +268,14 @@ div.ipr {
   display: flex;
  gap: 1rem;
 }
+.personal-info, .email{
+  width: 100%;
+}
 .personal-info > div, .email > div, .message > div{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100% !important;
+
 }
 label {
   font-weight: bold;
